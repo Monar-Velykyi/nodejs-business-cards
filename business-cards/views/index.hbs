@@ -1,0 +1,29 @@
+{{#if cards.length}}
+{{#each cards}}
+<div class="moreCard card col-lg-5 col-sm-auto" id={{id}} style="display: none;">
+    <div class="d-flex justify-content-start flex-row">
+        <div class="col-lg-4 col-sm-auto card-image align-items-start">
+            <img src="{{avatar}}" alt="{{first_name}}" class="d-block w-100">
+        </div>
+        <div class="col-lg-8 col-sm-auto d-flex flex-column align-items-start p-3">
+            <span class="text-uppercase mb-2">{{first_name}} {{last_name}}</span>
+            <span>{{email}}</span>
+        </div>
+    </div>
+</div>
+{{/each}}
+<div class="row d-flex justify-content-center m-3">
+    <button type="button" class="btn btn-primary load-more">Load More</button>
+    <div class="text text-primary" style="display:none;">
+        <span>This are all cards that we have :(</span>
+    </div>
+</div>
+{{#else}}
+<div class="row d-flex justify-content-center m-3">
+    <div class="col text-primary">
+        <span>Try to reload page</span>
+    </div>
+</div>
+{{/else}}
+{{/if}}
+
