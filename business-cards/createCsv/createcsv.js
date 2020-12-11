@@ -3,7 +3,7 @@ const axios = require('axios')
 const FIRST_PAGE = `https://reqres.in/api/users?page=1`
 const SECOND_PAGE = `https://reqres.in/api/users?page=2`
 
-const getCards = () => {
+(function() {
 
     const getFirstPageData = axios.get(FIRST_PAGE);
     const getSecondPageData = axios.get(SECOND_PAGE)
@@ -19,6 +19,4 @@ const getCards = () => {
         .catch((err) => {
             console.error(err)
         })
-}
-
-getCards()
+}())
